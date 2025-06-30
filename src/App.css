@@ -52,15 +52,29 @@ z-index: 1;
   color: black;
 }
 
-.buttons{
-  width: 100%;
-  color: rgb(0, 0, 0);
-  margin-top: 1%;
-  margin-bottom: 1%;
+.button{
+max-width: 10px;
 }
+
 
 
 .box::-webkit-scrollbar {
   flex-direction: column;
   display: none; /* Chrome, Safari */
+}
+
+.response{
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+  overflow: visible;
+}
+.response-container{
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+.response-box{
+  background-color: aqua;
+  margin-right: 10%;
 }

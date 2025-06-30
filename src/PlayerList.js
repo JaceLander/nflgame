@@ -4,8 +4,6 @@ import axios from 'axios';
 
    async function fetchPlayers() {
     const apiKey = process.env.REACT_APP_SPORTSDATA_API_KEY;
-
-    console.log("API KEY:", apiKey);
     try {
       const res = await axios.get(`https://api.sportsdata.io/v3/nfl/scores/json/Players?key=${apiKey}`);
       return res.data;

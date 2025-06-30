@@ -6,13 +6,13 @@ var fulldiv = [];
 for(var i = 0; i<players.length; i++)
 {
   var name = players[i].Name;
-  if(guess === '' || name.toLowerCase().includes(guess.toLowerCase())){
+  if(name.toLowerCase().includes(guess.toLowerCase())){
     fulldiv.push(
       <button 
-        className="buttons" 
-        onClick={functions}
-        value={name}>
-        {name}
+      className="buttons" 
+      onClick={functions}
+      value={name}>
+      {name}
       </button>)
       }
 }

@@ -5,16 +5,15 @@ import GuessResponse from './mainSelect';
 import { fetchPlayers } from './PlayerList';
 import mainSelect from "./mainSelect";
 import selection from "./Selection";
+import response from "./Response";
 
 function Main() {
   const [guess, setGuess] = useState('');
   const [activePlayers, setActivePlayers] = useState([]);
   const [returnedDiv, setReturnedDiv] = useState(<></>);
-
-function setName(e){
-  setGuess(e.target.value);
-}
-
+  const [responseDiv, setResponseDiv] = useState(<></>);
+  const [guessedPlayers, setGuessedPlayers] = useState([]);
+  
   useEffect(() => {
     async function loadPlayers() {
       const players = await fetchPlayers();
@@ -24,12 +23,33 @@ function setName(e){
     loadPlayers();
   }, []);
 
+var correctPlayer = activePlayers[0];
+
+function setName(e){
+  setGuess(e.target.value);
+}
+
+function addGuess(){
+  if(activePlayers.filter(player => player.Name === guess).length !== 0 && !guessedPlayers.includes(guess)){
+  guessedPlayers.push(guess);
+  setGuessedPlayers(guessedPlayers);
+  }
+}
+
+
+
   function handleChange(e) {
     setGuess(e.target.value);
   }
   useEffect(() => {
     setReturnedDiv(selection(activePlayers, guess, setName));
-}, [activePlayers, guess]);
+  }, [activePlayers, guess]);
+
+function responses() {
+
+  addGuess();
+  setResponseDiv(response(correctPlayer, guessedPlayers, activePlayers));
+}
 
 
   return (
@@ -41,8 +61,9 @@ function setName(e){
         <p className="title">Guess the active NFL player</p>
         <input type="text" value={guess} onChange={handleChange} />
         <div className="box">{returnedDiv}</div>
-        <input type="button" value="Submit" />
       </div>
+        <input type="button" className="button" value="Submit" onClick={responses}/>
+        <div className="box">{responseDiv}</div>
     </div>
   );
 }
