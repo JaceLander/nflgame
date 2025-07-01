@@ -1,13 +1,14 @@
 .App {
   display: flex;
   flex-direction: column;
+
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 
 .overlay{
@@ -53,8 +54,16 @@ z-index: 1;
 }
 
 .button{
-max-width: 10px;
+min-width: 150px;
+align-self: center;
+margin-bottom: 2%;
 }
+
+.buttons{
+  width: 100%;
+  align-self: center;
+  margin: 2%;
+  }
 
 
 
@@ -66,15 +75,38 @@ max-width: 10px;
 .response{
   display: flex;
   flex-direction: row;
-  width: 10%;
-  overflow: visible;
+  margin:auto;
+  gap: 1rem;  
+  
 }
 .response-container{
   display: flex;
   flex-direction: column;
-  overflow: visible;
+  gap: 1rem;
+
 }
 .response-box{
-  background-color: aqua;
-  margin-right: 10%;
+  background-color: rgb(212, 212, 212);
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 80px;
+  max-height: 80px;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  box-shadow: 0px 0px 10px 2px;
+  
+}
+
+.correct{
+  background-color: rgb(0, 202, 13);
+}
+.incorrect{
+  background-color: rgb(218, 107, 107);
+}
+
+.close{
+  background-color: rgb(255, 255, 112);
 }

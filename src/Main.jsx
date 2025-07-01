@@ -13,7 +13,9 @@ function Main() {
   const [returnedDiv, setReturnedDiv] = useState(<></>);
   const [responseDiv, setResponseDiv] = useState(<></>);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
-  
+
+
+
   useEffect(() => {
     async function loadPlayers() {
       const players = await fetchPlayers();
@@ -53,6 +55,7 @@ function responses() {
 
 
   return (
+    <div>
     <div className="App">
       <div className="overlay"></div>
       <video src={video} autoPlay loop muted />
@@ -63,7 +66,8 @@ function responses() {
         <div className="box">{returnedDiv}</div>
       </div>
         <input type="button" className="button" value="Submit" onClick={responses}/>
-        <div className="box">{responseDiv}</div>
+    </div>
+    <div>{responseDiv}</div>
     </div>
   );
 }
