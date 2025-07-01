@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+  </style>
     <App />
   </React.StrictMode>
 );

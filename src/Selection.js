@@ -9,7 +9,7 @@ for(var i = 0; i<players.length; i++)
   if(name.toLowerCase().includes(guess.toLowerCase())){
     fulldiv.push(
       <button 
-      className="buttons" 
+      className="buttons game-font" 
       onClick={functions}
       value={name}>
       {name}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import video from "./FootageBRollNFL.mp4";
+import video from "./footballBRollNFL.mp4";
 import Dropdown from 'react-bootstrap/Dropdown';
 import GuessResponse from './mainSelect';
 import { fetchPlayers } from './PlayerList';
@@ -59,16 +59,16 @@ function responses() {
     <div className="App">
       <div className="overlay"></div>
       <video src={video} autoPlay loop muted />
-      <div className="game">
+      <div className="game game-font">
         <h1 className="title">NFLdle</h1>
-        <p className="title">Guess the active NFL player</p>
-        <input type="text" value={guess} onChange={handleChange} />
-        <div className="box">{returnedDiv}</div>
+        <p className="title game-font">Guess the active NFL player</p>
+        <input className='textbox game-font' type="text" value={guess} onChange={handleChange} />
+        <div className="box game-font">{returnedDiv}</div>
       </div>
-        <input type="button" className="button" value="Submit" onClick={responses}/>
+        <input type="button" className="button game-font" value="Submit" onClick={responses}/>
         
     </div>
-    <div className="header-container">
+    <div className="header-container response-font">
         <div className="response-header">Name</div>
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
@@ -76,7 +76,7 @@ function responses() {
         <div className="response-header">Height</div>
         <div className="response-header">Position</div>
     </div>
-    <div>{responseDiv}</div>
+    <div className="response-font">{responseDiv}</div>
     </div>
   );
 }
