@@ -6,6 +6,7 @@ import { fetchPlayers } from './PlayerList';
 import mainSelect from "./mainSelect";
 import selection from "./Selection";
 import response from "./Response";
+import Modal from "./InfoModal";
 
 function Main() {
   const [guess, setGuess] = useState('');
@@ -13,6 +14,7 @@ function Main() {
   const [returnedDiv, setReturnedDiv] = useState(<></>);
   const [responseDiv, setResponseDiv] = useState(<></>);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
+  const [openModal, setOpenModal] = useState([]);
 
 
 
@@ -58,12 +60,17 @@ function responses() {
     <div>
     <div className="App">
       <div className="overlay"></div>
+      <button 
+        className="info" 
+        onClick={() => {setOpenModal(true);
+        }}
+        >ⓘ</button>
       <video src={video} autoPlay loop muted />
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
         <p className="title game-font">Guess the active NFL player</p>
         <input className='textbox game-font' type="text" value={guess} onChange={handleChange} />
-        <div className="box game-font">{returnedDiv}</div>
+        <div className="box game-font mask1">{returnedDiv}</div>
       </div>
         <input type="button" className="button game-font" value="Submit" onClick={responses}/>
         
@@ -73,9 +80,10 @@ function responses() {
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
         <div className="response-header">Weight</div>
-        <div className="response-header">Height</div>
+        {/* <div className="response-header">Height</div> */}
         <div className="response-header">Position</div>
     </div>
+    {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
     <div className="response-font">{responseDiv}</div>
     </div>
   );

@@ -20,7 +20,9 @@ const offensivePositions = [
   "LG",  // Left Guard
   "C",   // Center
   "RG",  // Right Guard
-  "RT"   // Right Tackle
+  "RT",
+  "OL",
+  "SS"    // Right Tackle
 ];
 
 const defensivePositions = [
@@ -34,7 +36,9 @@ const defensivePositions = [
   "CB",   // Cornerback
   "S",    // Safety
   "FS",   // Free Safety
-  "SS"    // Strong Safety
+  "SS",
+  "DB",
+  "DL"    // Strong Safety
 ];
 
 function detectSameDivision(team1,team2){
@@ -172,10 +176,10 @@ for(var i = 0; i<guessedPlayersNew.length; i++)
           className={`response-box ${weightColorCheck(Number(guessedPlayersNew[i].Weight), Number(correctPlayer.Weight))}`}>
           {getDirection(guessedPlayersNew[i].Weight, correctPlayer.Weight)}
         </div>
-        <div 
+        {/* <div 
           className={`response-box ${heightColorCheck(guessedPlayersNew[i].Height, correctPlayer.Height)}`}> 
           {getDirection(guessedPlayersNew[i].Height, correctPlayer.Height)}
-        </div>
+        </div> */}
         <div 
           className={`response-box ${positionColorCheck(guessedPlayersNew[i].Position, correctPlayer.Position)}`}> 
           {guessedPlayersNew[i].Position}

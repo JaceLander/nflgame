@@ -3,6 +3,26 @@
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  font-size: 2vw;
+}
+
+.info{
+  position: absolute;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style:normal;
+  font-size: 50px;
+  align-self: flex-end;
+  border: 0;
+  background: transparent;
+  margin-right:1%;
+  color:white;
+  cursor: pointer;
+}
+
+.title{
+margin-bottom: 0;
 }
 
 .game-font{
@@ -10,6 +30,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: large;
 }
 
 
@@ -35,6 +56,17 @@ html, body {
   z-index: -1;
 }
 
+.info-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  cursor: pointer;
+}
+
 
 
 video{
@@ -49,8 +81,16 @@ video{
 
 .textbox{
   margin-bottom: 5px;
-  height: 50px;
+  height: 40px;
+  width: 200px;
+  border-radius: 999px;
+  text-align: center;
 }
+
+.mask1 {
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
 
 .game{
 padding-bottom: 5px;
@@ -68,22 +108,27 @@ z-index: 1;
 .box{
   flex-direction: column;
   overflow: scroll;
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 100px;
+  max-height: 100px;
   min-width: 200px;
   max-width: 200px;
   color: black;
 }
 
 .button{
-min-width: 150px;
+min-width: 250px;
+min-height: 50px;
+border-radius: 9999px;
 align-self: center;
 margin-bottom: 2%;
+margin-top: .5%;
+cursor: pointer;
 }
 
 .buttons{
   align-self: center;
   margin: 2%;
+  cursor: pointer;
   width:96%;
   border-radius: 999px;
   }
@@ -104,9 +149,8 @@ margin-bottom: 2%;
   display: flex;
   flex-direction: column;
   gap: 2vw;
-  border-color: aliceblue;
   overflow: scroll;
-  max-height: 52vh;
+  max-height: 46vh;
   min-width: 100vw;
 
 }
