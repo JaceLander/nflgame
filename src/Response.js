@@ -62,12 +62,12 @@ function detectSameSide(team1,team2){
     }
   }
 
-function parseHeight(heightStr) {
-  const [feetStr, inchesStr] = heightStr.split("'");
-  const feet = parseInt(feetStr);
-  const inches = parseInt(inchesStr);
-  return feet * 12 + inches;
-}
+// function parseHeight(heightStr) {
+//   const [feetStr, inchesStr] = heightStr.split("'");
+//   const feet = parseInt(feetStr);
+//   const inches = parseInt(inchesStr);
+//   return feet * 12 + inches;
+// }
 
 // function heightColorCheck(guess, player){
 //   var Nguess = parseHeight(guess);
@@ -149,15 +149,12 @@ function response(correctPlayer, guessedPlayersList, players) {
 
 var guessedPlayersNew = [];
 for(var i = 0; i<guessedPlayersList.length; i++){
-var name = guessedPlayersList[i];
-guessedPlayersNew.push(players.filter(player => player.Name === name)[0]);
+guessedPlayersNew.push(players.filter(player => player.Name === guessedPlayersList[i])[0]);
 
 }
 var fulldiv = [];
 
-for(var i = 0; i<guessedPlayersNew.length; i++)
-
-
+for(var j = 0; j<guessedPlayersNew.length; j++)
 {
   
     fulldiv.push(
