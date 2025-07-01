@@ -4,7 +4,7 @@ import { fetchPlayers } from './PlayerList';
 import selection from "./Selection";
 import response from "./Response";
 import Modal from "./InfoModal";
-import getRandomPlayer from "./GetPlayer";
+// import getRandomPlayer from "./GetPlayer";
 
 function Main() {
   const [guess, setGuess] = useState('');
