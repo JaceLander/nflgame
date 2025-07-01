@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import video from "./footballBRollNFL.mp4";
-import Dropdown from 'react-bootstrap/Dropdown';
-import GuessResponse from './mainSelect';
 import { fetchPlayers } from './PlayerList';
-import mainSelect from "./mainSelect";
 import selection from "./Selection";
 import response from "./Response";
 import Modal from "./InfoModal";
@@ -80,7 +77,6 @@ function responses() {
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
         <div className="response-header">Weight</div>
-        {/* <div className="response-header">Height</div> */}
         <div className="response-header">Position</div>
     </div>
     <div className="response-font">{responseDiv}</div>

@@ -21,7 +21,7 @@ function Modal({setOpen}){
             </div>
             <div className="text modal-item font">The player changes upon reload of the page, but a daily mode is soon to come!</div>
             <div className="text modal-item small-font">Site created by Jace Lander</div>
-            <div className="text modal-item small-font">Want to see more from me? Check out</div>
+            <div className="text modal-item small-font">Want to see more from me? Check out JaceLander.com!</div>
             </div>
             </div>
             </div>
