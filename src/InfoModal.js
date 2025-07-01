@@ -19,7 +19,7 @@ function Modal({setOpen}){
                 <div className="example close-modal font">Close to value/right side of ball/right division</div>
                 <div className="example correct-modal font">Correct!</div>
             </div>
-            <div className="text modal-item font">The player changes upon reload of the page, but a daily mode is soon to come!</div>
+            <div className="text modal-item font">Each box corresponds to a different player metric and arrows state which direction the correct value is in.</div>
             <div className="text modal-item small-font font">Site created by Jace Lander</div>
             <div className="text modal-item small-font font">Want to see more from me? Check out jacelander.com!</div>
             </div>
