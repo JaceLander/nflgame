@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from "react";
-
-
 function selection(players, guess, functions) {
 var fulldiv = [];
 for(var i = 0; i<players.length; i++)

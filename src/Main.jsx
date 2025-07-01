@@ -24,7 +24,7 @@ function Main() {
     loadPlayers();
   }, []);
 
-var correctPlayer = (activePlayers.filter(player => player.Name === "Jalen Tolbert")[0]);
+var correctPlayer = (activePlayers.filter(player => player.Name === "Joe Flacco")[0]);
 
 function setName(e){
   setGuess(e.target.value);
