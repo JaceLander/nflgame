@@ -148,13 +148,12 @@ function positionColorCheck(guess, player){
 function response(correctPlayer, guessedPlayersList, players) {
 
 var guessedPlayersNew = [];
-for(var i = 0; i<guessedPlayersList.length; i++){
+for(let i = 0; i<guessedPlayersList.length; i++){
 guessedPlayersNew.push(players.filter(player => player.Name === guessedPlayersList[i])[0]);
-
 }
 var fulldiv = [];
 
-for(var j = 0; j<guessedPlayersNew.length; j++)
+for(let j = 0; j<guessedPlayersNew.length; j++)
 {
   
     fulldiv.push(
