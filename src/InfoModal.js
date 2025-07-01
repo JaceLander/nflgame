@@ -20,7 +20,7 @@ function Modal({setOpen}){
                 <div className="example correct-modal font">Correct!</div>
             </div>
             <div className="text modal-item font">Each box corresponds to a different player metric and arrows state the direction of the correct value.</div>
-            <div className="text modal-item font">Currently the correct player is randomly chosen upon opening the page, but a daily mode is in the works!</div>
+            <div className="text modal-item font">A randomly generated mode will be in the works soon! Thanks for playing!</div>
             <button className="button start-button" onClick={setOpen}>Let's Start!
             </button>
             <div className="text modal-item small-font font">Site created by Jace Lander</div>
