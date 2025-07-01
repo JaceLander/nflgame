@@ -19,9 +19,12 @@ function Modal({setOpen}){
                 <div className="example close-modal font">Close to value/right side of ball/right division</div>
                 <div className="example correct-modal font">Correct!</div>
             </div>
-            <div className="text modal-item font">Each box corresponds to a different player metric and arrows state which direction the correct value is in</div>
+            <div className="text modal-item font">Each box corresponds to a different player metric and arrows state the direction of the correct value.</div>
+            <div className="text modal-item font">Currently the correct player is randomly chosen upon opening the page, but a daily mode is in the works!</div>
+            <button className="button start-button" onClick={setOpen}>Let's Start!
+            </button>
             <div className="text modal-item small-font font">Site created by Jace Lander</div>
-            <div className="text modal-item small-font font">Want to see more from me? Check out jacelander.com!</div>
+            <div className="text modal-item small-font font">Want to see more from me? Go to jacelander.com!</div>
             </div>
             </div>
             </div>

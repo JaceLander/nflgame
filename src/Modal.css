@@ -89,5 +89,11 @@ padding: 2%;
   }
 
   .small-font{
-    font-size:16px;
+    font-size:14px;
+  }
+
+  .start-button{
+    margin-top: 5%;
+    margin-bottom: 15%;
+    background-color: rgb(163, 167, 170);
   }

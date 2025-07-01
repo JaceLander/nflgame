@@ -23,6 +23,7 @@
 
 .title{
 margin-bottom: 0;
+color: azure;
 }
 
 .game-font{
@@ -31,6 +32,7 @@ margin-bottom: 0;
   font-weight: 400;
   font-style: normal;
   font-size: large;
+  color: azure;
 }
 
 
@@ -85,6 +87,9 @@ video{
   border-radius: 999px;
   text-align: center;
   margin-top: 10px;
+  border: 0;
+  color: black;
+  background-color: azure;
 }
 
 .mask1 {
@@ -123,6 +128,9 @@ align-self: center;
 margin-bottom: 2%;
 margin-top: .5%;
 cursor: pointer;
+border: 0;
+color: black;
+background-color: azure;
 }
 
 .buttons{
@@ -131,6 +139,9 @@ cursor: pointer;
   cursor: pointer;
   width:96%;
   border-radius: 999px;
+  border: 0;
+  color: black;
+  background-color: azure;
   }
 
 .box::-webkit-scrollbar {

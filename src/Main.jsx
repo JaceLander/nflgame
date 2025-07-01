@@ -4,6 +4,7 @@ import { fetchPlayers } from './PlayerList';
 import selection from "./Selection";
 import response from "./Response";
 import Modal from "./InfoModal";
+import getRandomPlayer from "./GetPlayer";
 
 function Main() {
   const [guess, setGuess] = useState('');
@@ -24,7 +25,7 @@ function Main() {
     loadPlayers();
   }, []);
 
-var correctPlayer = (activePlayers.filter(player => player.Name === "Joe Flacco")[0]);
+var correctPlayer = (activePlayers.filter(player => player.Name === "Zach Ertz")[0]);
 
 function setName(e){
   setGuess(e.target.value);

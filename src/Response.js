@@ -20,7 +20,8 @@ const offensivePositions = [
   "TE",  // Tight End
   "LT",  // Left Tackle
   "LG",  // Left Guard
-  "C",   // Center
+  "C",
+  "G",   // Center
   "RG",  // Right Guard
   "RT",  // Right Tackle
   "OL"   // Offensive Lineman (general, often used when specific isn't given)
