@@ -66,6 +66,15 @@ function responses() {
         <div className="box">{returnedDiv}</div>
       </div>
         <input type="button" className="button" value="Submit" onClick={responses}/>
+        
+    </div>
+    <div className="header-container">
+        <div className="response-header">Name</div>
+        <div className="response-header">Team</div>
+        <div className="response-header">Age</div>
+        <div className="response-header">Weight</div>
+        <div className="response-header">Height</div>
+        <div className="response-header">Position</div>
     </div>
     <div>{responseDiv}</div>
     </div>

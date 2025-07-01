@@ -96,7 +96,7 @@ margin-bottom: 2%;
   align-items: center;
   justify-content: center;
   text-align: center; 
-  box-shadow: 0px 0px 10px 2px;
+  /* box-shadow: 0px 0px 10px 2px; */
   
 }
 
@@ -109,4 +109,22 @@ margin-bottom: 2%;
 
 .close{
   background-color: rgb(255, 255, 112);
+}
+
+.response-header{
+  min-width: 140px;
+  max-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+.header-container{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 1rem;  
 }

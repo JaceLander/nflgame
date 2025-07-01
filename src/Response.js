@@ -69,7 +69,7 @@ function heightColorCheck(guess, player){
   
   if (Nguess === Nplayer) {
     return "correct";
-  } else if (Math.abs(Nguess - Nplayer) > 6) {
+  } else if (Math.abs(Nguess - Nplayer) > 3) {
     return "incorrect";
   } else {
     return "close";
@@ -148,6 +148,7 @@ guessedPlayersNew.push(players.filter(player => player.Name === name)[0]);
 
 }
 var fulldiv = [];
+
 for(var i = 0; i<guessedPlayersNew.length; i++)
 
 
