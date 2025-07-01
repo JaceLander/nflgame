@@ -1,7 +1,7 @@
 .modal{
-    min-width: 450px;
-    min-height: 600px;
-    max-width: 450px;
+    min-width: 600px;
+    min-height: 800px;
+    max-width: 600px;
     max-height: 600px;
     border-radius: 30px;
     background-color: aliceblue;
@@ -59,10 +59,10 @@ padding: 2%;
 
 .example{
     background-color: rgb(212, 212, 212);
-    min-width: 10vw;
-    max-width: 10vw;
-    min-height: 5vw;
-    max-height: 5vw;
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 80px;
+    max-height: 80px;
     border-radius: 5%;
     display: flex;
     align-items: center;
@@ -76,14 +76,14 @@ padding: 2%;
     flex-direction: row;
 }
 
-.correct{
+.correct-modal{
     background-color: rgb(0, 202, 13);
   }
-  .incorrect{
+  .incorrect-modal{
     background-color: rgb(218, 107, 107);
   }
   
-  .close{
+  .close-modal{
     background-color: rgb(255, 255, 112);
     font-size: small;
   }

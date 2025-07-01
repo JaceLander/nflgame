@@ -15,13 +15,13 @@ function Modal({setOpen}){
             players and tasks you with finding the secret NFL player through trial and error.</div>
             <div className="text modal-item font">Examples</div>
             <div className="row">
-                <div className="example incorrect font">Wrong/Far away</div>
-                <div className="example close font">Close to value/right side of ball/right division</div>
-                <div className="example correct font">Correct!</div>
+                <div className="example incorrect-modal font">Wrong/Far away</div>
+                <div className="example close-modal font">Close to value/right side of ball/right division</div>
+                <div className="example correct-modal font">Correct!</div>
             </div>
             <div className="text modal-item font">The player changes upon reload of the page, but a daily mode is soon to come!</div>
-            <div className="text modal-item small-font">Site created by Jace Lander</div>
-            <div className="text modal-item small-font">Want to see more from me? Check out JaceLander.com!</div>
+            <div className="text modal-item small-font font">Site created by Jace Lander</div>
+            <div className="text modal-item small-font font">Want to see more from me? Check out jacelander.com!</div>
             </div>
             </div>
             </div>

@@ -159,28 +159,28 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
     fulldiv.push(
       <div className="response">
         <div 
-          className={`response-box ${equalCheck(guessedPlayersNew[i].Name, correctPlayer.Name)}`}>
-          {guessedPlayersNew[i].Name}
+          className={`response-box ${equalCheck(guessedPlayersNew[j].Name, correctPlayer.Name)}`}>
+          {guessedPlayersNew[j].Name}
         </div>
         <div 
-          className={`response-box ${teamCheck(guessedPlayersNew[i].Team, correctPlayer.Team)}`}>
-          {guessedPlayersNew[i].Team}
+          className={`response-box ${teamCheck(guessedPlayersNew[j].Team, correctPlayer.Team)}`}>
+          {guessedPlayersNew[j].Team}
         </div>
         <div 
-          className={`response-box ${ageColorCheck(Number(guessedPlayersNew[i].Age), Number(correctPlayer.Age))}`}>
-          {getDirection(guessedPlayersNew[i].Age, correctPlayer.Age)}
+          className={`response-box ${ageColorCheck(Number(guessedPlayersNew[j].Age), Number(correctPlayer.Age))}`}>
+          {getDirection(guessedPlayersNew[j].Age, correctPlayer.Age)}
         </div>
         <div 
-          className={`response-box ${weightColorCheck(Number(guessedPlayersNew[i].Weight), Number(correctPlayer.Weight))}`}>
-          {getDirection(guessedPlayersNew[i].Weight, correctPlayer.Weight)}
+          className={`response-box ${weightColorCheck(Number(guessedPlayersNew[j].Weight), Number(correctPlayer.Weight))}`}>
+          {getDirection(guessedPlayersNew[j].Weight, correctPlayer.Weight)}
         </div>
         {/* <div 
           className={`response-box ${heightColorCheck(guessedPlayersNew[i].Height, correctPlayer.Height)}`}> 
           {getDirection(guessedPlayersNew[i].Height, correctPlayer.Height)}
         </div> */}
         <div 
-          className={`response-box ${positionColorCheck(guessedPlayersNew[i].Position, correctPlayer.Position)}`}> 
-          {guessedPlayersNew[i].Position}
+          className={`response-box ${positionColorCheck(guessedPlayersNew[j].Position, correctPlayer.Position)}`}> 
+          {guessedPlayersNew[j].Position}
         </div>
       </div>)
 }
