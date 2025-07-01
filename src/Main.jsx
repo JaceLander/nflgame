@@ -77,6 +77,7 @@ function responses() {
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
         <div className="response-header">Weight</div>
+        {/* <div className="response-header">Height</div> */}
         <div className="response-header">Position</div>
     </div>
     <div className="response-font">{responseDiv}</div>
