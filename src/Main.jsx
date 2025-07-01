@@ -27,7 +27,7 @@ function Main() {
     loadPlayers();
   }, []);
 
-var correctPlayer = activePlayers[0];
+var correctPlayer = (activePlayers.filter(player => player.Name === "Jalen Tolbert")[0]);
 
 function setName(e){
   setGuess(e.target.value);
@@ -83,9 +83,10 @@ function responses() {
         {/* <div className="response-header">Height</div> */}
         <div className="response-header">Position</div>
     </div>
-    {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
     <div className="response-font">{responseDiv}</div>
+    {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
     </div>
+    
   );
 }
 

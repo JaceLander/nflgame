@@ -12,7 +12,9 @@ const divisions = [
 
 const offensivePositions = [
   "QB",  // Quarterback
-  "RB",  // Running Back
+  "RB",  // Running Back (includes HB, TB)
+  "TB",
+  "HB",
   "FB",  // Fullback
   "WR",  // Wide Receiver
   "TE",  // Tight End
@@ -20,25 +22,25 @@ const offensivePositions = [
   "LG",  // Left Guard
   "C",   // Center
   "RG",  // Right Guard
-  "RT",
-  "OL",
-  "SS"    // Right Tackle
+  "RT",  // Right Tackle
+  "OL"   // Offensive Lineman (general, often used when specific isn't given)
 ];
 
 const defensivePositions = [
-  "DE",   // Defensive End
-  "DT",   // Defensive Tackle
-  "NT",   // Nose Tackle
-  "EDGE", // Edge Rusher
-  "LB",   // Linebacker
-  "OLB",  // Outside Linebacker
-  "ILB",  // Inside Linebacker
-  "CB",   // Cornerback
-  "S",    // Safety
-  "FS",   // Free Safety
-  "SS",
-  "DB",
-  "DL"    // Strong Safety
+  "DE",    // Defensive End
+  "DT",    // Defensive Tackle
+  "NT",    // Nose Tackle
+  "EDGE",  // Edge Rusher (DE/OLB hybrid)
+  "LB",    // Linebacker
+  "OLB",   // Outside Linebacker
+  "ILB",   // Inside Linebacker
+  "MLB",   // Middle Linebacker
+  "CB",    // Cornerback
+  "FS",    // Free Safety
+  "SS",    // Strong Safety
+  "S",     // Generic Safety (can mean FS or SS)
+  "DB",    // Defensive Back (generic for CB/S)
+  "DL"     // Defensive Lineman (generic for DE/DT/NT)
 ];
 
 function detectSameDivision(team1,team2){

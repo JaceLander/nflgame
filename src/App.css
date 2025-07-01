@@ -63,8 +63,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  cursor: pointer;
+  z-index: 99;
 }
 
 
@@ -85,6 +84,7 @@ video{
   width: 200px;
   border-radius: 999px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .mask1 {
@@ -196,6 +196,7 @@ cursor: pointer;
   text-align: center; 
   color: aliceblue;
   margin-bottom: 10px;
+
 }
 
 .header-container{

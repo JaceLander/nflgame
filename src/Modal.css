@@ -1,3 +1,93 @@
 .modal{
-    
+    min-width: 450px;
+    min-height: 600px;
+    max-width: 450px;
+    max-height: 600px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    margin-top: 2%;
+    align-items: center;
+}
+.exit{
+    position: absolute;
+    margin: 10px;
+    align-self: flex-end;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2vw;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.font{
+    align-self: flex-end;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.title-font{
+    align-self: flex-end;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.text{
+padding: 2%;
+
+}
+
+.modal-item{
+    margin: auto;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.example{
+    background-color: rgb(212, 212, 212);
+    min-width: 10vw;
+    max-width: 10vw;
+    min-height: 5vw;
+    max-height: 5vw;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    margin: 5px;
+    font-size: medium;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.correct{
+    background-color: rgb(0, 202, 13);
+  }
+  .incorrect{
+    background-color: rgb(218, 107, 107);
+  }
+  
+  .close{
+    background-color: rgb(255, 255, 112);
+    font-size: small;
+  }
+
+  .small-font{
+    font-size:16px;
   }
