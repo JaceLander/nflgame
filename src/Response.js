@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 const divisions = [
   ["BUF", "MIA", "NE", "NYJ"],     // AFC East
   ["BAL", "CIN", "CLE", "PIT"],    // AFC North
@@ -69,18 +69,18 @@ function parseHeight(heightStr) {
   return feet * 12 + inches;
 }
 
-function heightColorCheck(guess, player){
-  var Nguess = parseHeight(guess);
-  var Nplayer = parseHeight(player);
+// function heightColorCheck(guess, player){
+//   var Nguess = parseHeight(guess);
+//   var Nplayer = parseHeight(player);
   
-  if (Nguess === Nplayer) {
-    return "correct";
-  } else if (Math.abs(Nguess - Nplayer) > 3) {
-    return "incorrect";
-  } else {
-    return "close";
-  }
-}
+//   if (Nguess === Nplayer) {
+//     return "correct";
+//   } else if (Math.abs(Nguess - Nplayer) > 3) {
+//     return "incorrect";
+//   } else {
+//     return "close";
+//   }
+// }
 
 function weightColorCheck(guess, player){
   if (guess === player) {
