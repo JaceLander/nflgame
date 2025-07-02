@@ -66,7 +66,7 @@ function responses() {
       <video src={video} autoPlay loop muted />
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
-        <p className="title title-font space">Guess the active NFL player</p>
+        <p className="title space">Guess the active NFL player</p>
         <input className='textbox game-font' type="text" value={guess} onChange={handleChange} />
         <div className="box game-font mask1">{returnedDiv}</div>
       </div>
