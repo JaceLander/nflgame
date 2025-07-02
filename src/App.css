@@ -190,6 +190,10 @@ background-color: azure;
   background-color: rgb(255, 255, 112);
 }
 
+.rise{
+  z-index: 99999;
+}
+
 .response-header{
   min-width: 14vw;
   max-width: 14vw;

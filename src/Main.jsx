@@ -59,7 +59,7 @@ function responses() {
     <div className="App">
       <div className="overlay"></div>
       <button 
-        className="info" 
+        className="info rise" 
         onClick={() => {setOpenModal(true);
         }}
         >ⓘ</button>
