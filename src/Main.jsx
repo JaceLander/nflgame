@@ -58,7 +58,6 @@ function responses() {
     <div>
     <div className="App">
     <video 
-      className={"video"} 
       src={video} 
       autoPlay 
       playsInline 
