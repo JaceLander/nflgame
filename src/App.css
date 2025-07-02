@@ -191,7 +191,7 @@ background-color: azure;
 }
 
 .rise{
-  z-index: 99999;
+  z-index: 99;
 }
 video {
   position: fixed;
