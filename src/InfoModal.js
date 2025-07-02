@@ -7,7 +7,7 @@ function Modal({setOpen}){
     
     useEffect(() => {
         setVisible(true);
-    });
+    }, []);
   
     return (
       <div className={`info-overlay ${visible ? "show" : "exit"}`}>
