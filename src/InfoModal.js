@@ -28,6 +28,7 @@ function Modal({setOpen}){
             <div className="text modal-item font">A randomly generated mode will be in the works soon! Thanks for playing!</div>
             <button className="button start-button game-font" onClick={setOpen}>Let's Start!
             </button>
+            <div className="text modal-item small-font font space">Please note: certain features will not work if using iPhones on low power mode</div>
             <div className="text modal-item small-font font">A site created by Jace Lander</div>
             <div className="text modal-item small-font font">Want to see more from me? Go to jacelander.com!</div>
             </div>
