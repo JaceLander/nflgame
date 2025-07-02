@@ -57,13 +57,20 @@ function responses() {
   return (
     <div>
     <div className="App">
+    <video 
+      className={"video"} 
+      src={video} 
+      autoPlay 
+      playsInline 
+      loop 
+      muted />
       <div className="overlay"></div>
       <button 
         className="info rise" 
         onClick={() => {setOpenModal(true);
         }}
         >ⓘ</button>
-      <video className={"video"} src={video} preload="auto" autoPlay playsInline loop muted />
+
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
         <p className="title space">Guess the active NFL player</p>
