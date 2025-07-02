@@ -21,6 +21,7 @@ const offensivePositions = [
   "LT",  // Left Tackle
   "LG",  // Left Guard
   "C",
+  "K",
   "G",   // Center
   "RG",  // Right Guard
   "RT",  // Right Tackle

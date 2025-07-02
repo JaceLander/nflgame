@@ -25,7 +25,7 @@ function Main() {
     loadPlayers();
   }, []);
 
-var correctPlayer = (activePlayers.filter(player => player.Name === "Xavier Worthy")[0]);
+var correctPlayer = (activePlayers.filter(player => player.Name === "Trey Hendrickson")[0]);
 
 function setName(e){
   setGuess(e.target.value);
@@ -63,7 +63,7 @@ function responses() {
         onClick={() => {setOpenModal(true);
         }}
         >ⓘ</button>
-      <video src={video} autoPlay playsInline loop muted />
+      <video className={"video"} src={video} preload="auto" autoPlay playsInline loop muted />
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
         <p className="title space">Guess the active NFL player</p>

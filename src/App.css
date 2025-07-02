@@ -193,6 +193,15 @@ background-color: azure;
 .rise{
   z-index: 99999;
 }
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -3; /* Behind your content */
+}
 
 .response-header{
   min-width: 14vw;
