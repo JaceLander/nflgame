@@ -63,7 +63,7 @@ function responses() {
         onClick={() => {setOpenModal(true);
         }}
         >ⓘ</button>
-      <video src={video} autoPlay loop muted />
+      <video src={video} autoPlay playsInline loop muted />
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
         <p className="title space">Guess the active NFL player</p>
