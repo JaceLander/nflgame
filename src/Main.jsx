@@ -4,7 +4,7 @@ import { fetchPlayers } from './PlayerList';
 import selection from "./Selection";
 import response from "./Response";
 import Modal from "./InfoModal";
-// import getRandomPlayer from "./GetPlayer";
+
 
 function Main() {
   const [guess, setGuess] = useState('');
@@ -66,7 +66,7 @@ function responses() {
       <video src={video} autoPlay loop muted />
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
-        <p className="title game-font">Guess the active NFL player</p>
+        <p className="title title-font space">Guess the active NFL player</p>
         <input className='textbox game-font' type="text" value={guess} onChange={handleChange} />
         <div className="box game-font mask1">{returnedDiv}</div>
       </div>
@@ -78,7 +78,6 @@ function responses() {
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
         <div className="response-header">Weight</div>
-        {/* <div className="response-header">Height</div> */}
         <div className="response-header">Position</div>
     </div>
     <div className="response-font">{responseDiv}</div>

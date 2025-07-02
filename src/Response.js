@@ -164,15 +164,15 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
           {guessedPlayersNew[j].Name}
         </div>
         <div 
-          className={`response-box ${teamCheck(guessedPlayersNew[j].Team, correctPlayer.Team)}`}>
+          className={`response-box bigger-font ${teamCheck(guessedPlayersNew[j].Team, correctPlayer.Team)}`}>
           {guessedPlayersNew[j].Team}
         </div>
         <div 
-          className={`response-box ${ageColorCheck(Number(guessedPlayersNew[j].Age), Number(correctPlayer.Age))}`}>
+          className={`response-box bigger-font ${ageColorCheck(Number(guessedPlayersNew[j].Age), Number(correctPlayer.Age))}`}>
           {getDirection(guessedPlayersNew[j].Age, correctPlayer.Age)}
         </div>
         <div 
-          className={`response-box ${weightColorCheck(Number(guessedPlayersNew[j].Weight), Number(correctPlayer.Weight))}`}>
+          className={`response-box bigger-font ${weightColorCheck(Number(guessedPlayersNew[j].Weight), Number(correctPlayer.Weight))}`}>
           {getDirection(guessedPlayersNew[j].Weight, correctPlayer.Weight)}
         </div>
         {/* <div 
@@ -180,7 +180,7 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
           {getDirection(guessedPlayersNew[i].Height, correctPlayer.Height)}
         </div> */}
         <div 
-          className={`response-box ${positionColorCheck(guessedPlayersNew[j].Position, correctPlayer.Position)}`}> 
+          className={`response-box bigger-font ${positionColorCheck(guessedPlayersNew[j].Position, correctPlayer.Position)}`}> 
           {guessedPlayersNew[j].Position}
         </div>
       </div>)
