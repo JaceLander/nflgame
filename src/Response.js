@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 const divisions = [
   ["BUF", "MIA", "NE", "NYJ"],     // AFC East
   ["BAL", "CIN", "CLE", "PIT"],    // AFC North
@@ -62,27 +63,7 @@ function detectSameSide(team1,team2){
     }else{
   return false;
     }
-  }
-
-// function parseHeight(heightStr) {
-//   const [feetStr, inchesStr] = heightStr.split("'");
-//   const feet = parseInt(feetStr);
-//   const inches = parseInt(inchesStr);
-//   return feet * 12 + inches;
-// }
-
-// function heightColorCheck(guess, player){
-//   var Nguess = parseHeight(guess);
-//   var Nplayer = parseHeight(player);
-  
-//   if (Nguess === Nplayer) {
-//     return "correct";
-//   } else if (Math.abs(Nguess - Nplayer) > 3) {
-//     return "incorrect";
-//   } else {
-//     return "close";
-//   }
-// }
+}
 
 function weightColorCheck(guess, player){
   if (guess === player) {
@@ -147,21 +128,28 @@ function positionColorCheck(guess, player){
   }
 }
 
-function response(correctPlayer, guessedPlayersList, players) {
+function Response({correctPlayer, guessedPlayers, activePlayers, className}) {
+  const [translating, setTranslating] = useState(false);
+var translate = false;
+  useEffect(() => setTranslating(true), []);
+
+if(!guessedPlayers){
+  return null;
+}
 
 var guessedPlayersNew = [];
-for(let i = 0; i<guessedPlayersList.length; i++){
-guessedPlayersNew.push(players.filter(player => player.Name === guessedPlayersList[i])[0]);
+
+for(let i = 0; i<guessedPlayers.length; i++){
+guessedPlayersNew.push(activePlayers.filter(player => player.Name === guessedPlayers[i])[0]);
 }
 var fulldiv = [];
 
 for(let j = 0; j<guessedPlayersNew.length; j++)
 {
-  
     fulldiv.push(
-      <div className="response">
+      <div className={`response font `}>
         <div 
-          className={`response-box ${equalCheck(guessedPlayersNew[j].Name, correctPlayer.Name)}`}>
+          className={`response-box  ${equalCheck(guessedPlayersNew[j].Name, correctPlayer.Name)}`}>
           {guessedPlayersNew[j].Name}
         </div>
         <div 
@@ -176,10 +164,6 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
           className={`response-box bigger-font ${weightColorCheck(Number(guessedPlayersNew[j].Weight), Number(correctPlayer.Weight))}`}>
           {getDirection(guessedPlayersNew[j].Weight, correctPlayer.Weight)}
         </div>
-        {/* <div 
-          className={`response-box ${heightColorCheck(guessedPlayersNew[i].Height, correctPlayer.Height)}`}> 
-          {getDirection(guessedPlayersNew[i].Height, correctPlayer.Height)}
-        </div> */}
         <div 
           className={`response-box bigger-font ${positionColorCheck(guessedPlayersNew[j].Position, correctPlayer.Position)}`}> 
           {guessedPlayersNew[j].Position}
@@ -188,10 +172,10 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
 }
 
   return (
-    <div className="response-container">
+    <div className={className}>
     {fulldiv.reverse()}
     </div>
   );
 }
 
-export default response;
+export default Response;

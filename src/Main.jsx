@@ -2,19 +2,15 @@ import React, { useEffect, useState } from "react";
 import video from "./footballBRollNFL.mp4";
 import { fetchPlayers } from './PlayerList';
 import selection from "./Selection";
-import response from "./Response";
+import Response from "./Response";
 import Modal from "./InfoModal";
-
-
 function Main() {
   const [guess, setGuess] = useState('');
   const [activePlayers, setActivePlayers] = useState([]);
   const [returnedDiv, setReturnedDiv] = useState(<></>);
-  const [responseDiv, setResponseDiv] = useState(<></>);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
   const [openModal, setOpenModal] = useState([]);
-
-
+  const [translate, setTranslate] = useState(false);
 
   useEffect(() => {
     async function loadPlayers() {
@@ -32,15 +28,19 @@ function setName(e){
 }
 
 function addGuess(){
+
   if(activePlayers.filter(player => player.Name === guess).length !== 0 && !guessedPlayers.includes(guess)){
   guessedPlayers.push(guess);
   setGuessedPlayers(guessedPlayers);
+  setTranslate(false);
+  setTimeout(() => setTranslate(true), 0);
+
   }
 }
 
 
 
-  function handleChange(e) {
+function handleChange(e) {
     setGuess(e.target.value);
   }
   useEffect(() => {
@@ -48,15 +48,15 @@ function addGuess(){
   }, [activePlayers, guess]);
 
 function responses() {
-
   addGuess();
-  setResponseDiv(response(correctPlayer, guessedPlayers, activePlayers));
+  setGuess("");
 }
 
 
   return (
     <div>
     <div className="App">
+    {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
     <video 
       src={video} 
       autoPlay 
@@ -80,14 +80,23 @@ function responses() {
         
     </div>
     <div className="header-container response-font">
+
         <div className="response-header">Name</div>
         <div className="response-header">Team</div>
         <div className="response-header">Age</div>
         <div className="response-header">Weight</div>
         <div className="response-header">Position</div>
+
     </div>
-    <div className="response-font">{responseDiv}</div>
-    {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
+    <div className="mask2">
+    <Response
+    correctPlayer={correctPlayer}
+    guessedPlayers={guessedPlayers}
+    activePlayers={activePlayers}
+    className={`response-container ${translate ? "show" : "back"}`}/>
+
+    </div>
+
     </div>
     
   );
