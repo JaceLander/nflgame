@@ -99,12 +99,12 @@ function handleChangePos(e) {
 
   useEffect(() => {
     setReturnedDiv(selection(activePlayers, guess, setName, pos));
-  }, [activePlayers, guess]);
+  }, [activePlayers, guess, pos]);
 
   useEffect(() => {
     setReturnedDivPos(selectionPos(allPositions, pos, setPosition));
     setReturnedDiv(selection(activePlayers, guess, setName, pos));
-  }, [allPositions, pos]);
+  }, [allPositions, pos, activePlayers, guess]);
 
 function responses() {
   

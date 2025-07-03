@@ -129,9 +129,7 @@ function positionColorCheck(guess, player){
 }
 
 function Response({correctPlayer, guessedPlayers, activePlayers, className}) {
-  const [translating, setTranslating] = useState(false);
-var translate = false;
-  useEffect(() => setTranslating(true), []);
+
 
 if(!guessedPlayers){
   return null;
