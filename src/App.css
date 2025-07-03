@@ -212,7 +212,7 @@ transition: transform 0.3s ease;
   overflow: scroll;
   background-color: rgba(0,0,0,0.5);
   min-height: 400px;
-
+  max-height: 34vw;
   max-width: 78vw;
   max-width: 78vw;
   margin: auto;
