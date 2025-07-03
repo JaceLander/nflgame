@@ -6,6 +6,29 @@
   font-size: 2vw;
 }
 
+
+.even{
+  justify-content: space-between;
+}
+
+.column{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.row-controls{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
 .info{
   position: absolute;
   font-family: "Outfit", sans-serif;
@@ -73,9 +96,8 @@ video{
 }
 
 .textbox{
-  margin-bottom: 5px;
+  outline: transparent;
   height: 40px;
-  width: 200px;
   border-radius: 999px;
   text-align: center;
   margin-top: 10px;
@@ -115,10 +137,9 @@ z-index: 1;
 .box{
   flex-direction: column;
   overflow: scroll;
+  margin-top: 5px;
   min-height: 100px;
   max-height: 100px;
-  min-width: 200px;
-  max-width: 200px;
   color: black;
 }
 
@@ -136,12 +157,27 @@ background-color: azure;
 transition: transform 0.3s ease;
 }
 
+.position{
+  max-width: 100px
+}
+
+.button-position{
+  min-width: 75px;
+}
+
+.button-names{
+  min-width: 175px;
+  max-width: 175px;
+
+}
+
 .buttons{
-  align-self: center;
-  margin: 2%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
   cursor: pointer;
-  width:96%;
   border-radius: 999px;
+  margin-bottom: 5px;
   border: 0;
   color: black;
   background-color: azure;
@@ -149,7 +185,6 @@ transition: transform 0.3s ease;
   }
 
   .buttons:hover{
-      transform: scale(1.04);
     }
 
     .button:hover{
@@ -177,25 +212,18 @@ transition: transform 0.3s ease;
   gap: 2vw;
   overflow: scroll;
   background-color: rgba(0,0,0,0.5);
-  min-height: 31vw;
+  min-height: 34vw;
+  max-height: 34vw;
   max-width: 78vw;
   margin: auto;
-  transform: translateY(-9vw);
   pointer-events: none;
-  transition: transform .66s ease, max-height .66s ease, min-height .66s ease;
   border-radius: 15px;
 }
 
 .response-container.show{
-  transform: translateY(0vw);
-  min-height: 25vw;
-  max-height: 25vw;
   pointer-events: all;
 }
 .response-container.back{
-  min-height: 34vw;
-  max-height: 34vw;
-  transition: transform 0s;
   
 }
 

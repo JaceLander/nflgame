@@ -1,17 +1,50 @@
 import React, { useEffect, useState } from "react";
 import video from "./footballBRollNFL.mp4";
 import { fetchPlayers } from './PlayerList';
-import selection from "./Selection";
+import {selection, selectionPos} from "./Selection";
 import Response from "./Response";
 import Modal from "./InfoModal";
 import WinModal from "./WinModal";
-function Main() {
+import dailyPlayer from "./DailyPlayerSelection";
 
+function Main() {
+  const allPositions = [
+    "DE",    // Defensive End
+    "DT",    // Defensive Tackle
+    "NT",    // Nose Tackle
+    "LB",    // Linebacker
+    "OLB",   // Outside Linebacker
+    "ILB",   // Inside Linebacker
+    "MLB",   // Middle Linebacker
+    "CB",    // Cornerback
+    "FS",    // Free Safety
+    "SS",    // Strong Safety
+    "S",     // Generic Safety (can mean FS or SS)
+    "DB",    // Defensive Back (generic for CB/S)
+    "DL",    // Defensive Lineman (generic for DE/DT/NT)
+    "QB",  // Quarterback
+    "RB",  // Running Back (includes HB, TB)
+    "TB",
+    "HB",
+    "FB",  // Fullback
+    "WR",  // Wide Receiver
+    "TE",  // Tight End
+    "LT",  // Left Tackle
+    "LG",  // Left Guard
+    "C",
+    "K",
+    "G",   // Center
+    "RG",  // Right Guard
+    "RT",  // Right Tackle
+    "OL"   // Offensive Lineman (general, often used when specific isn't given)
+  ];
 
 
   const [guess, setGuess] = useState('');
+  const [pos, setPos] = useState('');
   const [activePlayers, setActivePlayers] = useState([]);
   const [returnedDiv, setReturnedDiv] = useState(<></>);
+  const [returnedDivPos, setReturnedDivPos] = useState(<></>);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
   const [openModal, setOpenModal] = useState(true);
   const [openWinModal, setOpenWinModal] = useState(false);
@@ -27,10 +60,15 @@ function Main() {
     loadPlayers();
   }, []);
 
-var correctPlayer = (activePlayers.filter(player => player.Name === "Trey Hendrickson")[0]);
+var correctPlayer = (activePlayers.filter(player => player.Name === dailyPlayer())[0]);
 
 function setName(e){
   setGuess(e.target.value);
+}
+
+
+function setPosition(e){
+  setPos(e.target.value);
 }
 
 function addGuess(){
@@ -51,12 +89,22 @@ function addGuess(){
 
 
 
-function handleChange(e) {
+function handleChangeGuess(e) {
     setGuess(e.target.value);
-  }
+}
+
+function handleChangePos(e) {
+  setPos(e.target.value);
+}
+
   useEffect(() => {
-    setReturnedDiv(selection(activePlayers, guess, setName));
+    setReturnedDiv(selection(activePlayers, guess, setName, pos));
   }, [activePlayers, guess]);
+
+  useEffect(() => {
+    setReturnedDivPos(selectionPos(allPositions, pos, setPosition));
+    setReturnedDiv(selection(activePlayers, guess, setName, pos));
+  }, [allPositions, pos]);
 
 function responses() {
   
@@ -86,10 +134,18 @@ function responses() {
       <div className="game game-font">
         <h1 className="title">NFLdle</h1>
         <p className="title space">Guess the active NFL player</p>
-        <input className='textbox game-font' type="text" value={guess} onChange={handleChange} />
+        <div className="row-controls">
+        <div className="column even">
+        <input className='textbox game-font' type="text" value={guess} placeholder="Name" onChange={handleChangeGuess} />
         <div className="box game-font mask1">{returnedDiv}</div>
+        </div>
+        <div className="column even">
+        <input className='textbox game-font position' type="text" value={pos} placeholder="Position" onChange={handleChangePos} />
+        <div className="box game-font mask1 button-position">{returnedDivPos}</div>
+        </div>
+        </div>
       </div>
-        <input type="button" className="button game-font" value="Submit" onClick={responses}/>
+        <input type="button" className="button game-font" value="Submit"  onClick={responses}/>
         
     </div>
     <div className="header-container response-font">
