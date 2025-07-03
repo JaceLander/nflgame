@@ -69,7 +69,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: 100vw;
+  height: 100%;
   width: 100%
 }
 
@@ -112,7 +112,6 @@ video{
 }
 
 .mask2 {
-  height: 34vw;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -212,8 +211,9 @@ transition: transform 0.3s ease;
   gap: 2vw;
   overflow: scroll;
   background-color: rgba(0,0,0,0.5);
-  min-height: 34vw;
-  max-height: 34vw;
+  min-height: 400px;
+
+  max-width: 78vw;
   max-width: 78vw;
   margin: auto;
   pointer-events: none;
