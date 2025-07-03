@@ -37,7 +37,6 @@
   font-style:normal;
   font-size: 50px;
   align-self: flex-end;
-  border: 0;
   background: transparent;
   margin-right:1%;
   color:white;
@@ -207,6 +206,7 @@ transition: transform 0.3s ease;
 
 .response-container{
   display: flex;
+  border: 4px solid aliceblue;
   flex-direction: column;
   gap: 2vw;
   overflow: scroll;
@@ -214,10 +214,10 @@ transition: transform 0.3s ease;
   min-height: 28vw;
   max-height: 28vw;
   max-width: 78vw;
-  max-width: 78vw;
+
   margin: auto;
   pointer-events: none;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .response-container.show{
