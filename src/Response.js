@@ -149,7 +149,7 @@ for(let j = 0; j<guessedPlayersNew.length; j++)
     fulldiv.push(
       <div className={`response font `}>
         <div 
-          className={`response-box  ${equalCheck(guessedPlayersNew[j].Name, correctPlayer.Name)}`}>
+          className={`response-box response-font  ${equalCheck(guessedPlayersNew[j].Name, correctPlayer.Name)}`}>
           {guessedPlayersNew[j].Name}
         </div>
         <div 

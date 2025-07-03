@@ -4,13 +4,19 @@ import { fetchPlayers } from './PlayerList';
 import selection from "./Selection";
 import Response from "./Response";
 import Modal from "./InfoModal";
+import WinModal from "./WinModal";
 function Main() {
+
+
+
   const [guess, setGuess] = useState('');
   const [activePlayers, setActivePlayers] = useState([]);
   const [returnedDiv, setReturnedDiv] = useState(<></>);
   const [guessedPlayers, setGuessedPlayers] = useState([]);
-  const [openModal, setOpenModal] = useState([]);
+  const [openModal, setOpenModal] = useState(true);
+  const [openWinModal, setOpenWinModal] = useState(false);
   const [translate, setTranslate] = useState(false);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     async function loadPlayers() {
@@ -30,11 +36,16 @@ function setName(e){
 function addGuess(){
 
   if(activePlayers.filter(player => player.Name === guess).length !== 0 && !guessedPlayers.includes(guess)){
+  setCount(count+1);
   guessedPlayers.push(guess);
   setGuessedPlayers(guessedPlayers);
   setTranslate(false);
   setTimeout(() => setTranslate(true), 0);
-
+  if(guess===correctPlayer.Name)
+  {
+    
+    setTimeout(() => setOpenWinModal(true), 750);
+  }
   }
 }
 
@@ -48,6 +59,7 @@ function handleChange(e) {
   }, [activePlayers, guess]);
 
 function responses() {
+  
   addGuess();
   setGuess("");
 }
@@ -57,6 +69,7 @@ function responses() {
     <div>
     <div className="App">
     {openModal && <Modal setOpen={() => setOpenModal(false)}/>}
+    {openWinModal && <WinModal setOpen={() => setOpenWinModal(false)} guessNum={count}/>}
     <video 
       src={video} 
       autoPlay 
