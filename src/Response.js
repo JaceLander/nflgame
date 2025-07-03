@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
 const divisions = [
   ["BUF", "MIA", "NE", "NYJ"],     // AFC East
   ["BAL", "CIN", "CLE", "PIT"],    // AFC North

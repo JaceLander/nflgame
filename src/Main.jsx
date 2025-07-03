@@ -8,36 +8,7 @@ import WinModal from "./WinModal";
 import dailyPlayer from "./DailyPlayerSelection";
 
 function Main() {
-  const allPositions = [
-    "DE",    // Defensive End
-    "DT",    // Defensive Tackle
-    "NT",    // Nose Tackle
-    "LB",    // Linebacker
-    "OLB",   // Outside Linebacker
-    "ILB",   // Inside Linebacker
-    "MLB",   // Middle Linebacker
-    "CB",    // Cornerback
-    "FS",    // Free Safety
-    "SS",    // Strong Safety
-    "S",     // Generic Safety (can mean FS or SS)
-    "DB",    // Defensive Back (generic for CB/S)
-    "DL",    // Defensive Lineman (generic for DE/DT/NT)
-    "QB",  // Quarterback
-    "RB",  // Running Back (includes HB, TB)
-    "TB",
-    "HB",
-    "FB",  // Fullback
-    "WR",  // Wide Receiver
-    "TE",  // Tight End
-    "LT",  // Left Tackle
-    "LG",  // Left Guard
-    "C",
-    "K",
-    "G",   // Center
-    "RG",  // Right Guard
-    "RT",  // Right Tackle
-    "OL"   // Offensive Lineman (general, often used when specific isn't given)
-  ];
+
 
 
   const [guess, setGuess] = useState('');
@@ -102,9 +73,39 @@ function handleChangePos(e) {
   }, [activePlayers, guess, pos]);
 
   useEffect(() => {
+    const allPositions = [
+      "DE",    // Defensive End
+      "DT",    // Defensive Tackle
+      "NT",    // Nose Tackle
+      "LB",    // Linebacker
+      "OLB",   // Outside Linebacker
+      "ILB",   // Inside Linebacker
+      "MLB",   // Middle Linebacker
+      "CB",    // Cornerback
+      "FS",    // Free Safety
+      "SS",    // Strong Safety
+      "S",     // Generic Safety (can mean FS or SS)
+      "DB",    // Defensive Back (generic for CB/S)
+      "DL",    // Defensive Lineman (generic for DE/DT/NT)
+      "QB",  // Quarterback
+      "RB",  // Running Back (includes HB, TB)
+      "TB",
+      "HB",
+      "FB",  // Fullback
+      "WR",  // Wide Receiver
+      "TE",  // Tight End
+      "LT",  // Left Tackle
+      "LG",  // Left Guard
+      "C",
+      "K",
+      "G",   // Center
+      "RG",  // Right Guard
+      "RT",  // Right Tackle
+      "OL"   // Offensive Lineman (general, often used when specific isn't given)
+    ];
     setReturnedDivPos(selectionPos(allPositions, pos, setPosition));
     setReturnedDiv(selection(activePlayers, guess, setName, pos));
-  }, [allPositions, pos, activePlayers, guess]);
+  }, [pos, activePlayers, guess]);
 
 function responses() {
   
