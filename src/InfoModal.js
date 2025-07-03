@@ -12,8 +12,6 @@ function Modal({setOpen}){
     return (
       <div className={`info-overlay ${visible ? "show" : "exit"}`}>
             <div className={`modal ${visible ? "show" : "exit"}`}>
-            <button className="exit" onClick={setOpen}>✖
-            </button>
             <div className="modal-item">
             <div className="text modal-item title-font">Welcome to NFLdle! </div>
             <div className="text modal-item font">NFLdle is a Wordle-like game which focuses on active NFL
