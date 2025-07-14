@@ -39,7 +39,7 @@ const day = today.getDate();
         player = "Sam Howell";
         break;
       case "14":
-        player = "Derwin James";
+        player = "Josh Allen";
         break;
       case "15":
         player = "Mark Andrews";
