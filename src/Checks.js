@@ -3,7 +3,7 @@ const divisions = [
     ["BAL", "CIN", "CLE", "PIT"],    // AFC North
     ["HOU", "IND", "JAX", "TEN"],    // AFC South
     ["DEN", "KC", "LV", "LAC"],      // AFC West
-    ["DAL", "NYG", "PHI", "WSH"],    // NFC East
+    ["DAL", "NYG", "PHI", "WAS"],    // NFC East
     ["CHI", "DET", "GB", "MIN"],     // NFC North
     ["ATL", "CAR", "NO", "TB"],      // NFC South
     ["ARI", "LAR", "SF", "SEA"]      // NFC West
